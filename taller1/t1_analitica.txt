@@ -1,0 +1,27 @@
+TALLER ANALÍTICO 1: LÓGICA PROPOSICIONAL (20 MIN)
+
+En ingeniería del conocimiento, debemos traducir el lenguaje natural a reglas lógicas estrictas. Lea el siguiente fragmento de un manual de otorgamiento de créditos:
+
+"Un cliente es elegible para el crédito Hipotecario Plus si sus ingresos anuales superan los 50,000 USD y tiene un historial crediticio 'Excelente'. Sin embargo, si el cliente tiene deudas activas superiores a 10,000 USD, no será elegible bajo ninguna circunstancia, a menos que presente un avalista."
+
+Misión: Extraiga y formalice este texto en Reglas de Producción (SI... Y/O... ENTONCES...). Identifique claramente cuáles son las variables (Hechos) que el sistema debe pedir al usuario.
+
+ESCRITURA DE REGLAS LÓGICAS:
+
+Regla 1: ELEGIBILIDAD BASE
+SI (ingresos_anuales > 50000) Y (historial_crediticio = "Excelente")
+ENTONCES (elegible = VERDADERO)
+
+Regla 2: EXCLUSIÓN POR DEUDAS
+SI (deudas_activas > 10000)
+ENTONCES (elegible = FALSO) - SALVO QUE tenga avalista
+
+Regla 3: EXCEPCIÓN CON AVALISTA
+SI (deudas_activas > 10000) Y (tiene_avalista = "Sí")
+ENTONCES (elegible = VERDADERO)
+
+HECHOS (variables que el sistema debe pedir al usuario):
+1. ingresos_anuales (número: en USD)
+2. historial_crediticio (cadena: "Excelente", "Bueno", "Regular", "Malo")
+3. deudas_activas (número: en USD)
+4. tiene_avalista (cadena: "Sí" o "No")

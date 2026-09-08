@@ -1,0 +1,27 @@
+TALLER ANALÍTICO 1: CÁLCULO DE GRADOS DE VERDAD (20 MIN)
+
+FUNCIÓN TRIANGULAR:
+Vértices: a = 18°C, b = 22°C, c = 26°C
+
+μ(x) = {
+  0, si x ≤ a
+  (x-a)/(b-a), si a < x ≤ b
+  (c-x)/(c-b), si b < x < c
+  0, si x ≥ c
+}
+
+PREGUNTA 1: x = 20°C
+Como a=18 < x=20 ≤ b=22, uso: μ(20) = (20-18)/(22-18)
+μ(20) = 2/4 = 0.5
+
+PREGUNTA 2: x = 25°C
+Como b=22 < x=25 < c=26, uso: μ(25) = (26-25)/(26-22)
+μ(25) = 1/4 = 0.25
+
+PREGUNTA 3: Interpretación
+μ(20) = 0.5 → La temperatura es 50% agradable
+μ(25) = 0.25 → La temperatura es 25% agradable
+El motor de inferencia usa estos valores para tomar decisiones:
+- 0 = completamente falso
+- 1 = completamente verdadero
+- Valores entre 0 y 1 = grados de verdad parcial

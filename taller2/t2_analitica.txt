@@ -1,0 +1,24 @@
+TALLER ANALÍTICO 2: TRAZA DE INFERENCIA
+
+REGLAS:
+R1: SI [Tiene Motor] Y [Tiene Dos Ruedas] → [Es Motocicleta]
+R2: SI [Es Motocicleta] → [Requiere Casco]
+R3: SI [Requiere Casco] Y [Es Menor de Edad] → [Permiso Denegado]
+
+HECHOS INICIALES: Tiene Motor=Sí, Tiene Dos Ruedas=Sí, Es Menor de Edad=Sí
+
+TRAZA DEL MOTOR:
+
+CICLO 1: R1 → Tiene Motor=Sí y Tiene Dos Ruedas=Sí → SE DISPARA
+         Nuevo hecho: Es Motocicleta=Sí
+
+CICLO 2: R2 → Es Motocicleta=Sí → SE DISPARA
+         Nuevo hecho: Requiere Casco=Sí
+
+CICLO 3: R3 → Requiere Casco=Sí y Es Menor de Edad=Sí → SE DISPARA
+         Nuevo hecho: Permiso Denegado=Sí
+
+CICLO 4: No hay más reglas → EL MOTOR SE DETIENE
+
+RESULTADO: PERMISO DENEGADO
+Reglas disparadas: R1 → R2 → R3
