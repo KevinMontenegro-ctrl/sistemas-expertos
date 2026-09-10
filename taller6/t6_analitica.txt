@@ -1,0 +1,27 @@
+TALLER ANALÍTICO: EL ALGORITMO EN PAPEL (20 MIN)
+
+DATOS INICIALES:
+6 clientes → 3 compraron seguro, 3 no compraron.
+Entropía inicial = 1 (conjunto balanceado).
+
+PREGUNTA A: ¿Es mayor de 30 años?
+- Grupo Izquierdo: [2 compraron, 2 no compraron] → entropía = 1
+- Grupo Derecho: [1 compró, 1 no compró] → entropía = 1
+- Entropía ponderada = (4/6)*1 + (2/6)*1 = 1
+- Ganancia de Información = 1 - 1 = 0
+
+PREGUNTA B: ¿Tiene Auto?
+- Grupo Izquierdo: [3 compraron, 0 no] → entropía = 0
+- Grupo Derecho: [0 compraron, 3 no] → entropía = 0
+- Entropía ponderada = (3/6)*0 + (3/6)*0 = 0
+- Ganancia de Información = 1 - 0 = 1
+
+RESPUESTA A:
+La Pregunta B proporciona la mayor Ganancia de Información (1 vs 0).
+Reduce completamente la entropía y separa perfectamente las clases.
+
+RESPUESTA B:
+Si el Árbol de Decisión elige la Pregunta B como nodo raíz, la Regla Lógica aprendida es:
+
+SI Tiene Auto = Sí ENTONCES Compró Seguro = Sí
+SI Tiene Auto = No ENTONCES Compró Seguro = No
