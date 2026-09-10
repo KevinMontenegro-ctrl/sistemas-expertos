@@ -1,0 +1,30 @@
+REGLA:
+R1: SI (Rentabilidad es ALTA) O (Impacto_Social es ALTO) Y (Riesgo es BAJO)
+    ENTONCES (Aprobación es SEGURA)
+
+GRADOS DE MEMBRESÍA:
+Rentabilidad ALTA = 0.6
+Impacto_Social ALTO = 0.2
+Riesgo BAJO = 0.4
+
+CÁLCULO DE LA FUERZA DE LA PREMISA:
+
+Paso 1: Respetar precedencia (paréntesis OR primero)
+  (Rentabilidad ALTA) O (Impacto_Social ALTO)
+  = max(0.6, 0.2)
+  = 0.6
+
+Paso 2: Evaluar el AND con Riesgo BAJO
+  Resultado_OR AND (Riesgo BAJO)
+  = min(0.6, 0.4)
+  = 0.4
+
+FUERZA DE ACTIVACIÓN = 0.4
+
+RESPUESTA:
+El conjunto difuso de la conclusión "Aprobación SEGURA" 
+se truncará a una altura Y = 0.4
+
+Explicación: El valor 0.4 es el grado mínimo (AND) entre
+el resultado del OR (0.6) y el Riesgo BAJO (0.4). Este valor
+se usa para truncar la función de membresía de la conclusión.
