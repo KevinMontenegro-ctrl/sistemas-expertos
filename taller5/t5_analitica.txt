@@ -1,0 +1,21 @@
+DATOS:
+x = 10% → μ(10) = 0.2
+x = 20% → μ(20) = 0.8
+x = 30% → μ(30) = 0.8
+x = 40% → μ(40) = 0.0
+
+PASO 1: NUMERADOR Σ(x · μ(x))
+= (10 × 0.2) + (20 × 0.8) + (30 × 0.8) + (40 × 0.0)
+= 2 + 16 + 24 + 0
+= 42
+
+PASO 2: DENOMINADOR Σ μ(x)
+= 0.2 + 0.8 + 0.8 + 0.0
+= 1.8
+
+PASO 3: CENTROIDE (COG)
+COG = 42 / 1.8
+COG = 23.33%
+
+RESULTADO:
+El sistema recomendará un descuento exacto (crisp) de 23.33%
