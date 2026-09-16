@@ -1,0 +1,25 @@
+
+
+PUNTOS:
+Clase A (Círculos): (2,2), (3,3), (4,2)
+Clase B (Equis):    (6,6), (7,8), (8,7)
+
+LÍNEA ÓPTIMA:
+La frontera de decisión aproximada es la recta:
+x + y = 9   (o y = -x + 9)
+
+Esta línea deja el mismo margen (calle) a ambos lados.
+
+VECTORES DE SOPORTE:
+Los puntos que quedan más cerca del margen son:
+- Clase A: (3,3) y (4,2)
+- Clase B: (6,6)
+
+Estos 3 puntos son los Vectores de Soporte. Si se mueven, la línea cambia.
+Los demás puntos están más lejos y no afectan la frontera.
+
+NUEVO PUNTO (1,1) DE CLASE A:
+No cambia la posición de la línea.
+Justificación: (1,1) está muy lejos del margen, dentro de la zona de Clase A.
+SVM solo depende de los puntos que están sobre el margen o violan la separación.
+Un punto bien clasificado y alejado no es vector de soporte, por lo tanto no altera el hiperplano.
