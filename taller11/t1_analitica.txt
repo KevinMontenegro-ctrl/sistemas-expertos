@@ -1,0 +1,31 @@
+
+DATOS:
+W1 = 0.8  (peso para Ingresos X1)
+W2 = -0.5 (peso para Deudas X2)
+b  = -10  (sesgo)
+Cliente: X1 = 50, X2 = 20
+
+PASO 1: COMBINACIÓN LINEAL (Z)
+Z = (W1 · X1) + (W2 · X2) + b
+Z = (0.8 · 50) + (-0.5 · 20) + (-10)
+Z = 40 + (-10) + (-10)
+Z = 40 - 10 - 10
+Z = 20
+
+PASO 2: FUNCIÓN ESCALÓN
+Si Z ≥ 0 → 1
+Si Z < 0 → 0
+
+Como Z = 20 ≥ 0 → la neurona DISPARA = 1
+La neurona APRUEBA el crédito.
+
+PASO 3: ANÁLISIS DE LOS PESOS
+¿Por qué W2 es negativo?
+Porque las deudas tienen un efecto contrario a los ingresos.
+A mayor deuda (X2 más grande), el término W2·X2 se vuelve más negativo,
+reduciendo el valor de Z. Esto hace que sea más difícil que la neurona
+dispare (es decir, más difícil aprobar el crédito).
+
+Interpretación empresarial:
+- W1 positivo → más ingresos = más probabilidad de aprobar
+- W2 negativo → más deudas = menos probabilidad de aprobar
