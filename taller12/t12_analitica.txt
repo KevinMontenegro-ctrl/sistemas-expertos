@@ -1,0 +1,27 @@
+ARQUITECTURA:
+- 3 entradas (Edad, Ingresos, Deuda)
+- 1 Capa Oculta con 4 neuronas
+- 1 Capa de Salida con 1 neurona
+
+CÁLCULOS:
+
+1. PESOS ENTRE ENTRADA Y CAPA OCULTA:
+   Cada una de las 3 entradas se conecta con cada una de las 4 neuronas.
+   W1 = 3 × 4 = 12 pesos
+
+2. SESGOS EN LA CAPA OCULTA:
+   Cada neurona oculta tiene 1 sesgo.
+   b1 = 4 sesgos
+
+3. PESOS ENTRE CAPA OCULTA Y CAPA DE SALIDA:
+   Cada una de las 4 neuronas ocultas se conecta con la neurona de salida.
+   W2 = 4 × 1 = 4 pesos
+
+4. SESGO EN LA CAPA DE SALIDA:
+   La neurona de salida tiene 1 sesgo.
+   b2 = 1 sesgo
+
+TOTAL DE PARÁMETROS ENTRENABLES:
+12 + 4 + 4 + 1 = 21 parámetros
+
+RESULTADO: La red tiene 21 parámetros entrenables.
